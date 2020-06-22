@@ -646,6 +646,17 @@
             }
         }
     </style>
+
+    <script>
+        var loginButton = document.querySelector(".login-button");
+        var loginContainer = document.querySelector(".login-container");
+
+        loginButton.onclick = function () {
+            loginContainer.style.transition = "all 0.5s";
+            loginContainer.style.opacity = "0";
+            loginContainer.style.transform = "scale(0)";
+        };
+    </script>
 </body>
 
 </html>
