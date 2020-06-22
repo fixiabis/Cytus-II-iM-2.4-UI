@@ -56,8 +56,13 @@
             <text id="system-version-straght-link-mode-text" x="356" y="286.5" fill="#bbb">Version 2.4 Straght Link
                 Mode</text>
 
-            <circle id="progress-circle-1" cx="399.5" cy="215.5" r="40" stroke="#ddd" stroke-width="0.5" fill="rgba(255, 255, 255, 0.1)"></circle>
-            <circle id="progress-circle-2" cx="399.5" cy="215.5" r="25" stroke="#ddd" stroke-width="0.5" fill="none"></circle>
+            <g id="progress-circles">
+                <circle id="progress-circle-1" cx="399.5" cy="215.5" r="40" stroke="#ddd" stroke-width="0.5"
+                    fill="rgba(255, 255, 255, 0.1)"></circle>
+                <circle id="progress-circle-2" cx="399.5" cy="215.5" r="25" stroke="#ddd" stroke-width="0.5"
+                    fill="none">
+                </circle>
+            </g>
 
             <path id="bottom-left-line"
                 d="M 246 282 h 88 m -12 0 m 0 -1 a 1 1 0 0 1, 0 2 a 1 1 0 0 1, 0 -2 m -15 1 m 0 -2 a 2 2 0 0 1, 0 4 a 2 2 0 0 1, 0 -4 m -10 2 m 0 -1 a 1 1 0 0 1, 0 2 a 1 1 0 0 1, 0 -2"
@@ -72,7 +77,74 @@
         </svg>
     </div>
 
-    <style></style>
+    <style>
+        svg #progress-circles {
+            animation: progress-circle-scale 1s backwards;
+            transform-origin: 399.5px 215.5px;
+        }
+
+        svg #progress-circle-1 {
+            animation-name: progress-circle-1;
+            animation-delay: 1s;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-fill-mode: backwards;
+            stroke-dashoffset: 0px;
+            stroke-dasharray: 300px;
+            transform-origin: 399.5px 215.5px;
+        }
+
+        svg #progress-circle-2 {
+            animation-name: progress-circle-2;
+            animation-delay: 2s;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-fill-mode: backwards;
+            stroke-dashoffset: 0px;
+            stroke-dasharray: 300px;
+            transform-origin: 399.5px 215.5px;
+        }
+
+        @keyframes progress-circle-scale {
+            from {
+                transform: scale(0);
+            }
+        }
+
+        @keyframes progress-circle-1 {
+            0% {
+                transform: rotate(360deg);
+                stroke-dashoffset: -100px;
+                fill: rgba(255, 255, 255, 0.1);
+            }
+
+            75% {
+                transform: rotate(0deg);
+                stroke-dashoffset: 0px;
+                fill: rgba(255, 255, 255, 0.1);
+            }
+
+            80% {
+                fill: #ddd;
+            }
+
+            85% {
+                fill: rgba(255, 255, 255, 0.1);
+            }
+
+            90% {
+                fill: #ddd;
+            }
+        }
+
+        @keyframes progress-circle-2 {
+            from {
+                transform: rotate(360deg);
+                stroke-dashoffset: 200px;
+                fill: none;
+            }
+        }
+    </style>
 
     <style>
         svg #vertical-lines {
@@ -216,7 +288,7 @@
         }
 
         svg #progress-initializing-text {
-            animation: progress-initializing-text 0.5s 2s backwards;
+            animation: progress-initializing-text 0.5s 1s backwards;
         }
 
         svg #progress-bracket-start {
