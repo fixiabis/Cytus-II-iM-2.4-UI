@@ -16,74 +16,349 @@
             height: 100vh;
         }
 
-        #system-container {
+        .login-container {
+            position: absolute;
+            top: calc(50% - 225.5px);
+            left: calc(50% - 399.75px);
+            width: 799.5px;
+            height: 451px;
+            overflow: hidden;
+            border: 2px transparent solid;
+            border-radius: 10px;
+            animation: login-container 1s 3s forwards;
+        }
+
+        .progress-container {
             position: absolute;
             top: calc(50% - 225.5px);
             left: calc(50% - 399.75px);
             width: 799.5px;
             height: 451px;
         }
+
+        .account-container {
+            font-family: 'Cabin', monospace;
+            position: absolute;
+            top: 40px;
+            left: 25px;
+            width: 300px;
+            height: 25px;
+            overflow: hidden;
+        }
+
+        .account-container .field-name-with-input {
+            animation: left-slide-in 0.5s 4s backwards;
+        }
+
+        .password-container .field-name-with-input {
+            animation: left-slide-in 0.5s 4.5s backwards;
+        }
+
+        .field-name {
+            width: 120px;
+            height: 25px;
+            text-align: center;
+        }
+
+        .field-name sup {
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 10px;
+            margin-left: -5px;
+        }
+
+        .field-name-with-input {
+            display: flex;
+            width: 300px;
+            height: 25px;
+            color: #bbb;
+            border-radius: 2px;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .field-name-with-input .vertical-line {
+            width: 0px;
+            height: 15px;
+            border-right: 1.5px #bbb solid;
+            margin-top: 5px;
+            margin-right: 10px;
+        }
+
+        .field-name-with-input input {
+            color: #bbb;
+            border: none;
+            height: 15px;
+            background-color: transparent;
+            width: 160px;
+            padding: 5px;
+            outline: none;
+            font-size: 20px;
+            letter-spacing: 2px;
+        }
+
+        .password-container {
+            font-family: 'Cabin', monospace;
+            position: absolute;
+            top: 75px;
+            left: 25px;
+            width: 300px;
+            height: 25px;
+            overflow: hidden;
+        }
+
+        .login-button {
+            position: absolute;
+            top: 105px;
+            right: 25px;
+            width: 80px;
+            height: 25px;
+            color: #bbb;
+            line-height: 25px;
+            text-align: center;
+            border-radius: 2px;
+            background-color: rgba(255, 255, 255, 0.1);
+            font-family: 'Cabin', monospace;
+            animation: login-button 0.5s 4s backwards;
+            cursor: pointer;
+            transition: all 0.5s;
+        }
+
+        .login-button:active {
+            color: #130f13;
+            background-color: #bbb;
+            transform: scale(0.8);
+        }
+
+        @keyframes left-slide-in {
+            from {
+                transform: translate(-100%);
+            }
+        }
+
+        @keyframes login-button {
+            from {
+                transform: translateX(200%);
+            }
+        }
+
+        @keyframes login-container {
+            50% {
+                border-color: #ddd;
+            }
+
+            95% {
+                border-radius: 10px;
+            }
+
+            100% {
+                border-radius: 0px;
+                top: calc(50% - 69.7px);
+                left: calc(50% - 174.25px);
+                width: 348.5px;
+                height: 139.4px;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <div id="system-container">
-        <svg id="debug" width="799.5" height="451" xmlns="http://www.w3.org/2000/svg">
-            <path id="grid-lines" stroke="#444" stroke-width="0.25" fill="none"
-                d="M 0 0 v 451 M 20.5 0 v 451 M 41 0 v 451 M 61.5 0 v 451 M 82 0 v 451 M 102.5 0 v 451 M 123 0 v 451 M 143.5 0 v 451 M 164 0 v 451 M 184.5 0 v 451 M 205 0 v 451 M 225.5 0 v 451 M 246 0 v 451 M 266.5 0 v 451 M 287 0 v 451 M 307.5 0 v 451 M 328 0 v 451 M 348.5 0 v 451 M 369 0 v 451 M 389.5 0 v 451 M 410 0 v 451 M 430.5 0 v 451 M 451 0 v 451 M 471.5 0 v 451 M 492 0 v 451 M 512.5 0 v 451 M 533 0 v 451 M 553.5 0 v 451 M 574 0 v 451 M 594.5 0 v 451 M 615 0 v 451 M 635.5 0 v 451 M 656 0 v 451 M 676.5 0 v 451 M 697 0 v 451 M 717.5 0 v 451 M 738 0 v 451 M 758.5 0 v 451 M 779 0 v 451 M 799.5 0 v 451 M 0 0 h 799.5 M 0 20.5 h 799.5 M 0 41 h 799.5 M 0 61.5 h 799.5 M 0 82 h 799.5 M 0 102.5 h 799.5 M 0 123 h 799.5 M 0 143.5 h 799.5 M 0 164 h 799.5 M 0 184.5 h 799.5 M 0 205 h 799.5 M 0 225.5 h 799.5 M 0 246 h 799.5 M 0 266.5 h 799.5 M 0 287 h 799.5 M 0 307.5 h 799.5 M 0 328 h 799.5 M 0 348.5 h 799.5 M 0 369 h 799.5 M 0 389.5 h 799.5 M 0 410 h 799.5 M 0 430.5 h 799.5 M 0 451 h 799.5">
-            </path>
+    <div class="login-container">
+        <div class="progress-container">
+            <svg width="799.5" height="451" xmlns="http://www.w3.org/2000/svg">
+                <path class="grid-lines" stroke="#444" stroke-width="0.25" fill="none"
+                    d="M 0 0 v 451 M 20.5 0 v 451 M 41 0 v 451 M 61.5 0 v 451 M 82 0 v 451 M 102.5 0 v 451 M 123 0 v 451 M 143.5 0 v 451 M 164 0 v 451 M 184.5 0 v 451 M 205 0 v 451 M 225.5 0 v 451 M 246 0 v 451 M 266.5 0 v 451 M 287 0 v 451 M 307.5 0 v 451 M 328 0 v 451 M 348.5 0 v 451 M 369 0 v 451 M 389.5 0 v 451 M 410 0 v 451 M 430.5 0 v 451 M 451 0 v 451 M 471.5 0 v 451 M 492 0 v 451 M 512.5 0 v 451 M 533 0 v 451 M 553.5 0 v 451 M 574 0 v 451 M 594.5 0 v 451 M 615 0 v 451 M 635.5 0 v 451 M 656 0 v 451 M 676.5 0 v 451 M 697 0 v 451 M 717.5 0 v 451 M 738 0 v 451 M 758.5 0 v 451 M 779 0 v 451 M 799.5 0 v 451 M 0 0 h 799.5 M 0 20.5 h 799.5 M 0 41 h 799.5 M 0 61.5 h 799.5 M 0 82 h 799.5 M 0 102.5 h 799.5 M 0 123 h 799.5 M 0 143.5 h 799.5 M 0 164 h 799.5 M 0 184.5 h 799.5 M 0 205 h 799.5 M 0 225.5 h 799.5 M 0 246 h 799.5 M 0 266.5 h 799.5 M 0 287 h 799.5 M 0 307.5 h 799.5 M 0 328 h 799.5 M 0 348.5 h 799.5 M 0 369 h 799.5 M 0 389.5 h 799.5 M 0 410 h 799.5 M 0 430.5 h 799.5 M 0 451 h 799.5">
+                </path>
 
-            <g stroke="#130f13" fill="none">
-                <circle id="circle-cover-1" cx="399.5" cy="225.5" r="399.5" stroke-width="240.2"></circle>
-                <circle id="circle-cover-2" cx="399.5" cy="225.5" r="79.95" stroke-width="159.8"></circle>
-            </g>
+                <g stroke="#130f13" fill="none">
+                    <circle class="circle-cover-1" cx="399.5" cy="225.5" r="399.5" stroke-width="240.2"></circle>
+                    <circle class="circle-cover-2" cx="399.5" cy="225.5" r="79.95" stroke-width="159.8"></circle>
+                </g>
 
-            <text id="progress-bracket-start" x="390" y="159" fill="#bbb">[</text>
-            <text id="progress-initializing-text" x="335" y="159" fill="#bbb">INITIALIZING</text>
-            <text id="progress-finished-text" x="358" y="159" fill="#bbb">FINISHED</text>
-            <text id="progress-bracket-end" x="400" y="159" fill="#bbb">]</text>
+                <g class="progress-layout">
+                    <text class="progress-bracket-start" x="390" y="159" fill="#bbb">[</text>
+                    <text class="progress-initializing-text" x="335" y="159" fill="#bbb">INITIALIZING</text>
+                    <text class="progress-finished-text" x="358" y="159" fill="#bbb">FINISHED</text>
+                    <text class="progress-bracket-end" x="400" y="159" fill="#bbb">]</text>
 
-            <path id="curves" d="M 287 164 a 102.5 102.5 0 0 0 0 102.5 M 512.5 164 a 102.5 102.5 0 0 1 0 102.5"
-                fill="none" stroke="#ddd" stroke-width="0.25"></path>
+                    <path class="curves"
+                        d="M 287 164 a 102.5 102.5 0 0 0 0 102.5 M 512.5 164 a 102.5 102.5 0 0 1 0 102.5" fill="none"
+                        stroke="#ddd" stroke-width="0.25"></path>
 
-            <path id="vertical-lines" d="M 328 164 v 102.5 M 471.5 164 v 102.5" fill="none" stroke="#ddd"
-                stroke-width="3" stroke-dasharray="0.15 20.5" stroke-dashoffset="3" stroke-linecap="round"></path>
+                    <path class="vertical-lines" d="M 328 164 v 102.5 M 471.5 164 v 102.5" fill="none" stroke="#ddd"
+                        stroke-width="3" stroke-dasharray="0.15 20.5" stroke-dashoffset="3" stroke-linecap="round">
+                    </path>
 
-            <rect id="system-access-to-im-system-text-background" x="364" y="267.5" width="70" height="8"
-                fill="rgba(255, 255, 255, 0.1)"></rect>
-            <text id="system-access-to-im-system-text" x="369" y="274.5" fill="#bbb">Access To iM System</text>
-            <path id="top-line" d="M 353.625 277.5 h 92.25" fill="none" stroke="#ddd" stroke-width="0.5"></path>
-            <text id="system-version-straght-link-mode-text" x="356" y="286.5" fill="#bbb">Version 2.4 Straght Link
-                Mode</text>
+                    <rect class="system-access-to-im-system-text-background" x="364" y="267.5" width="70" height="8"
+                        fill="rgba(255, 255, 255, 0.1)"></rect>
+                    <text class="system-access-to-im-system-text" x="369" y="274.5" fill="#bbb">Access To iM
+                        System</text>
+                    <path class="top-line" d="M 353.625 277.5 h 92.25" fill="none" stroke="#ddd" stroke-width="0.5">
+                    </path>
+                    <text class="system-version-straght-link-mode-text" x="356" y="286.5" fill="#bbb">Version 2.4
+                        Straght
+                        Link
+                        Mode</text>
 
-            <g id="progress-circles">
-                <circle id="progress-circle-1" cx="399.5" cy="215.5" r="40" stroke="#ddd" stroke-width="0.5"
-                    fill="rgba(255, 255, 255, 0.1)"></circle>
-                <circle id="progress-circle-2" cx="399.5" cy="215.5" r="25" stroke="#ddd" stroke-width="0.5"
-                    fill="none">
-                </circle>
-            </g>
+                    <g class="progress-circles">
+                        <circle class="progress-circle-1" cx="399.5" cy="215.5" r="40" stroke="#ddd" stroke-width="0.5"
+                            fill="rgba(255, 255, 255, 0.1)"></circle>
+                        <circle class="progress-circle-2" cx="399.5" cy="215.5" r="25" stroke="#ddd" stroke-width="0.5"
+                            fill="none">
+                        </circle>
+                    </g>
 
-            <path id="bottom-left-line"
-                d="M 246 282 h 88 m -12 0 m 0 -1 a 1 1 0 0 1, 0 2 a 1 1 0 0 1, 0 -2 m -15 1 m 0 -2 a 2 2 0 0 1, 0 4 a 2 2 0 0 1, 0 -4 m -10 2 m 0 -1 a 1 1 0 0 1, 0 2 a 1 1 0 0 1, 0 -2"
-                fill="#bbb" stroke="#bbb" stroke-width="0.25"></path>
+                    <path class="bottom-left-line"
+                        d="M 246 282 h 88 m -12 0 m 0 -1 a 1 1 0 0 1, 0 2 a 1 1 0 0 1, 0 -2 m -15 1 m 0 -2 a 2 2 0 0 1, 0 4 a 2 2 0 0 1, 0 -4 m -10 2 m 0 -1 a 1 1 0 0 1, 0 2 a 1 1 0 0 1, 0 -2"
+                        fill="#bbb" stroke="#bbb" stroke-width="0.25"></path>
 
-            <path id="bottom-right-line"
-                d="M 465.5 282 h 88 m -88 0 m 12 0 m 0 -1 a 1 1 0 0 1, 0 2 a 1 1 0 0 1, 0 -2 m 15 1 m 0 -2 a 2 2 0 0 1, 0 4 a 2 2 0 0 1, 0 -4 m 10 2 m 0 -1 a 1 1 0 0 1, 0 2 a 1 1 0 0 1, 0 -2"
-                fill="#bbb" stroke="#bbb" stroke-width="0.25"></path>
+                    <path class="bottom-right-line"
+                        d="M 465.5 282 h 88 m -88 0 m 12 0 m 0 -1 a 1 1 0 0 1, 0 2 a 1 1 0 0 1, 0 -2 m 15 1 m 0 -2 a 2 2 0 0 1, 0 4 a 2 2 0 0 1, 0 -4 m 10 2 m 0 -1 a 1 1 0 0 1, 0 2 a 1 1 0 0 1, 0 -2"
+                        fill="#bbb" stroke="#bbb" stroke-width="0.25"></path>
 
-            <path id="bottom-line-1" d="M 369 297 h 61.5" fill="none" stroke="#bbb" stroke-width="0.25"></path>
-            <path id="bottom-line-2" d="M 307.5 298.25 h 184.5" fill="none" stroke="#bbb" stroke-width="0.25"></path>
-        </svg>
+                    <path class="bottom-line-1" d="M 369 297 h 61.5" fill="none" stroke="#bbb" stroke-width="0.25">
+                    </path>
+                    <path class="bottom-line-2" d="M 307.5 298.25 h 184.5" fill="none" stroke="#bbb"
+                        stroke-width="0.25">
+                    </path>
+                </g>
+
+                <g class="login-layout">
+                    <path class="top-thick-line" d="M 225.5 158 h 348.5" stroke="#bbb" stroke-width="3"></path>
+
+                    <path class="horizon-lines" d="M 245 184 h 307.5" fill="none" stroke="#ddd" stroke-width="3"
+                        stroke-dasharray="0.15 20.5" stroke-dashoffset="7" stroke-linecap="round">
+                    </path>
+
+
+                    <rect class="system-access-to-im-system-text-background" x="261.5" y="267.5" width="70" height="8"
+                        fill="rgba(255, 255, 255, 0.1)"></rect>
+                    <text class="system-access-to-im-system-text" x="266.5" y="274.5" fill="#bbb">Access To iM
+                        System</text>
+                    <path class="top-line" d="M 251.125 277.5 h 92.25" fill="none" stroke="#ddd" stroke-width="0.5">
+                    </path>
+                    <text class="system-version-straght-link-mode-text" x="253.5" y="286.5" fill="#bbb">Version 2.4
+                        Straght
+                        Link
+                        Mode</text>
+
+                    <path class="bottom-thick-line" d="M 225.5 293 h 348.5" stroke="#bbb" stroke-width="3"></path>
+                </g>
+            </svg>
+        </div>
+        <div class="account-container">
+            <div class="field-name-with-input">
+                <div class="field-name">
+                    ACCOUNT<sup>+</sup>
+                </div>
+                <div class="vertical-line"></div>
+                <input type="password">
+            </div>
+        </div>
+        <div class="password-container">
+            <div class="field-name-with-input">
+                <div class="field-name">
+                    PASSWORD<sup>+</sup>
+                </div>
+                <div class="vertical-line"></div>
+                <input type="password">
+            </div>
+        </div>
+        <div class="login-button">LOGIN</div>
     </div>
 
     <style>
-        svg #progress-circles {
+        svg .login-layout .top-thick-line,
+        svg .login-layout .bottom-thick-line {
+            animation: thick-line 0.5s 3.5s backwards;
+            stroke-dashoffset: 0px;
+            stroke-dasharray: 348.5px;
+        }
+
+        @keyframes thick-line {
+            from {
+                stroke-dashoffset: 348.5px;
+                transform: translateX(174.25px);
+            }
+        }
+    </style>
+
+    <style>
+        svg .login-layout .horizon-lines {
+            animation-name: horizon-lines-fade-in, horizon-lines;
+            animation-delay: 3.5s, 3.5s;
+            animation-duration: 2s, 5s;
+            animation-iteration-count: 1, infinite;
+            animation-timing-function: linear, linear;
+            animation-fill-mode: backwards, forwards;
+        }
+
+        @keyframes horizon-lines-fade-in {
+            from {
+                opacity: 0;
+            }
+        }
+
+        @keyframes horizon-lines {
+            to {
+                stroke-dashoffset: 307.5;
+            }
+        }
+    </style>
+
+    <style>
+        svg .login-layout .system-access-to-im-system-text,
+        svg .login-layout .system-version-straght-link-mode-text {
+            font-size: 7px;
+            font-weight: 400;
+            font-family: 'Cabin', monospace;
+            animation: system-text 0.5s 3.5s backwards;
+        }
+
+        svg .login-layout .system-access-to-im-system-text-background {
+            animation: system-text 0.5s 3.5s backwards;
+        }
+
+        svg .login-layout .top-line {
+            stroke-dashoffset: 0px;
+            stroke-dasharray: 92.25px;
+            animation: top-line 0.5s 3.5s backwards;
+        }
+
+        @keyframes top-line {
+            from {
+                stroke-dashoffset: 92.25px;
+                stroke-dasharray: 92.25px;
+                transform: translateX(46.125px);
+            }
+        }
+
+        @keyframes system-text {
+            from {
+                opacity: 0;
+                transform: translateY(8px);
+            }
+        }
+    </style>
+
+    <style>
+        svg .progress-layout {
+            animation: progress-layout 2s 3s forwards;
+        }
+
+        @keyframes progress-layout {
+            to {
+                opacity: 0;
+            }
+        }
+    </style>
+
+    <style>
+        svg .progress-layout .progress-circles {
             animation: progress-circle-scale 1s backwards;
             transform-origin: 399.5px 215.5px;
         }
 
-        svg #progress-circle-1 {
+        svg .progress-layout .progress-circle-1 {
             animation-name: progress-circle-1;
             animation-delay: 1s;
             animation-duration: 2s;
@@ -94,7 +369,7 @@
             transform-origin: 399.5px 215.5px;
         }
 
-        svg #progress-circle-2 {
+        svg .progress-layout .progress-circle-2 {
             animation-name: progress-circle-2;
             animation-delay: 1s;
             animation-duration: 2s;
@@ -153,7 +428,7 @@
     </style>
 
     <style>
-        svg #vertical-lines {
+        svg .progress-layout .vertical-lines {
             animation-name: vertical-lines-fade-in, vertical-lines;
             animation-duration: 2s, 3s;
             animation-iteration-count: 1, infinite;
@@ -175,19 +450,19 @@
     </style>
 
     <style>
-        svg #system-access-to-im-system-text,
-        svg #system-version-straght-link-mode-text {
+        svg .progress-layout .system-access-to-im-system-text,
+        svg .progress-layout .system-version-straght-link-mode-text {
             font-size: 7px;
             font-weight: 400;
             font-family: 'Cabin', monospace;
             animation: system-text 0.5s 1s backwards;
         }
 
-        svg #system-access-to-im-system-text-background {
+        svg .progress-layout .system-access-to-im-system-text-background {
             animation: system-text 0.5s 1s backwards;
         }
 
-        svg #top-line {
+        svg .progress-layout .top-line {
             stroke-dashoffset: 0px;
             stroke-dasharray: 92.25px;
             animation: top-line 0.5s 1s backwards;
@@ -210,7 +485,7 @@
     </style>
 
     <style>
-        svg #curves {
+        svg .progress-layout .curves {
             transform-origin: center;
             animation: curves 0.5s 0.5s backwards;
         }
@@ -224,11 +499,11 @@
     </style>
 
     <style>
-        svg #bottom-left-line {
+        svg .progress-layout .bottom-left-line {
             animation: bottom-left-line 0.5s 0.5s backwards;
         }
 
-        svg #bottom-right-line {
+        svg .progress-layout .bottom-right-line {
             animation: bottom-right-line 0.5s 0.5s backwards;
         }
 
@@ -248,13 +523,13 @@
     </style>
 
     <style>
-        svg #bottom-line-1 {
+        svg .progress-layout .bottom-line-1 {
             stroke-dashoffset: 0px;
             stroke-dasharray: 61.5px;
             animation: bottom-line-1 0.5s 1s backwards;
         }
 
-        svg #bottom-line-2 {
+        svg .progress-layout .bottom-line-2 {
             stroke-dashoffset: 0px;
             stroke-dasharray: 184.5px;
             animation: bottom-line-2 0.5s 1s backwards;
@@ -278,43 +553,43 @@
     </style>
 
     <style>
-        svg #progress-bracket-start,
-        svg #progress-bracket-end,
-        svg #progress-initializing-text,
-        svg #progress-finished-text {
+        svg .progress-layout .progress-bracket-start,
+        svg .progress-layout .progress-bracket-end,
+        svg .progress-layout .progress-initializing-text,
+        svg .progress-layout .progress-finished-text {
             font-size: 16px;
             font-weight: 500;
             font-family: 'Roboto Mono', monospace;
         }
 
-        svg #progress-initializing-text,
-        svg #progress-finished-text {
+        svg .progress-layout .progress-initializing-text,
+        svg .progress-layout .progress-finished-text {
             font-weight: 100;
             letter-spacing: 1px;
         }
 
-        svg #progress-initializing-text {
+        svg .progress-layout .progress-initializing-text {
             animation-name: progress-text-show, progress-text-hide;
             animation-duration: 0.5s, 0.5s;
             animation-delay: 1s, 2.5s;
             animation-fill-mode: backwards, forwards;
         }
 
-        svg #progress-finished-text {
+        svg .progress-layout .progress-finished-text {
             animation-name: progress-text-show;
             animation-duration: 0.5s;
             animation-delay: 3s;
             animation-fill-mode: backwards;
         }
 
-        svg #progress-bracket-start {
+        svg .progress-layout .progress-bracket-start {
             animation-name: progress-text-show, progress-bracket-start;
             animation-duration: 2s, 2s;
             animation-delay: 0s, 0s;
             animation-fill-mode: backwards, forwards;
         }
 
-        svg #progress-bracket-end {
+        svg .progress-layout .progress-bracket-end {
             animation-name: progress-text-show, progress-bracket-end;
             animation-duration: 2s, 2s;
             animation-delay: 0s, 0s;
@@ -351,11 +626,11 @@
             background-color: #130f13;
         }
 
-        svg #circle-cover-1 {
+        svg .circle-cover-1 {
             animation: circle-cover-1 3s forwards;
         }
 
-        svg #circle-cover-2 {
+        svg .circle-cover-2 {
             animation: circle-cover-2 3s forwards;
         }
 
