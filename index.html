@@ -40,7 +40,7 @@
 
             <text id="progress-bracket-start" x="390" y="159" fill="#bbb">[</text>
             <text id="progress-initializing-text" x="335" y="159" fill="#bbb">INITIALIZING</text>
-            <!-- <text id="progress-finished-text" x="358" y="159" fill="#bbb">FINISHED</text> -->
+            <text id="progress-finished-text" x="358" y="159" fill="#bbb">FINISHED</text>
             <text id="progress-bracket-end" x="400" y="159" fill="#bbb">]</text>
 
             <path id="curves" d="M 287 164 a 102.5 102.5 0 0 0 0 102.5 M 512.5 164 a 102.5 102.5 0 0 1 0 102.5"
@@ -96,7 +96,7 @@
 
         svg #progress-circle-2 {
             animation-name: progress-circle-2;
-            animation-delay: 2s;
+            animation-delay: 1s;
             animation-duration: 2s;
             animation-timing-function: linear;
             animation-fill-mode: backwards;
@@ -138,7 +138,13 @@
         }
 
         @keyframes progress-circle-2 {
-            from {
+            0% {
+                transform: rotate(720deg);
+                stroke-dashoffset: 200px;
+                fill: none;
+            }
+
+            50% {
                 transform: rotate(360deg);
                 stroke-dashoffset: 200px;
                 fill: none;
@@ -288,31 +294,41 @@
         }
 
         svg #progress-initializing-text {
-            animation: progress-initializing-text 0.5s 1s backwards;
+            animation-name: progress-text-show, progress-text-hide;
+            animation-duration: 0.5s, 0.5s;
+            animation-delay: 1s, 2.5s;
+            animation-fill-mode: backwards, forwards;
+        }
+
+        svg #progress-finished-text {
+            animation-name: progress-text-show;
+            animation-duration: 0.5s;
+            animation-delay: 3s;
+            animation-fill-mode: backwards;
         }
 
         svg #progress-bracket-start {
-            animation-name: progress-bracket-show, progress-bracket-start;
+            animation-name: progress-text-show, progress-bracket-start;
             animation-duration: 2s, 2s;
             animation-delay: 0s, 0s;
             animation-fill-mode: backwards, forwards;
         }
 
         svg #progress-bracket-end {
-            animation-name: progress-bracket-show, progress-bracket-end;
+            animation-name: progress-text-show, progress-bracket-end;
             animation-duration: 2s, 2s;
             animation-delay: 0s, 0s;
             animation-fill-mode: backwards, forwards;
         }
 
-        @keyframes progress-initializing-text {
+        @keyframes progress-text-show {
             from {
                 opacity: 0;
             }
         }
 
-        @keyframes progress-bracket-show {
-            from {
+        @keyframes progress-text-hide {
+            to {
                 opacity: 0;
             }
         }
