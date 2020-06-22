@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iM System</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Cabin:wght@400&family=Roboto+Mono:wght@300&display=swap">
+    <style>
+        body {
+            margin: 0;
+            background-color: #130f13;
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #system-container {
+            position: absolute;
+            top: calc(50% - 225.5px);
+            left: calc(50% - 399.75px);
+            width: 799.5px;
+            height: 451px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="system-container">
+        <svg id="debug" width="799.5" height="451" xmlns="http://www.w3.org/2000/svg">
+            <path id="grid-lines" stroke="#444" stroke-width="0.25" fill="none"
+                d="M 0 0 v 451 M 20.5 0 v 451 M 41 0 v 451 M 61.5 0 v 451 M 82 0 v 451 M 102.5 0 v 451 M 123 0 v 451 M 143.5 0 v 451 M 164 0 v 451 M 184.5 0 v 451 M 205 0 v 451 M 225.5 0 v 451 M 246 0 v 451 M 266.5 0 v 451 M 287 0 v 451 M 307.5 0 v 451 M 328 0 v 451 M 348.5 0 v 451 M 369 0 v 451 M 389.5 0 v 451 M 410 0 v 451 M 430.5 0 v 451 M 451 0 v 451 M 471.5 0 v 451 M 492 0 v 451 M 512.5 0 v 451 M 533 0 v 451 M 553.5 0 v 451 M 574 0 v 451 M 594.5 0 v 451 M 615 0 v 451 M 635.5 0 v 451 M 656 0 v 451 M 676.5 0 v 451 M 697 0 v 451 M 717.5 0 v 451 M 738 0 v 451 M 758.5 0 v 451 M 779 0 v 451 M 799.5 0 v 451 M 0 0 h 799.5 M 0 20.5 h 799.5 M 0 41 h 799.5 M 0 61.5 h 799.5 M 0 82 h 799.5 M 0 102.5 h 799.5 M 0 123 h 799.5 M 0 143.5 h 799.5 M 0 164 h 799.5 M 0 184.5 h 799.5 M 0 205 h 799.5 M 0 225.5 h 799.5 M 0 246 h 799.5 M 0 266.5 h 799.5 M 0 287 h 799.5 M 0 307.5 h 799.5 M 0 328 h 799.5 M 0 348.5 h 799.5 M 0 369 h 799.5 M 0 389.5 h 799.5 M 0 410 h 799.5 M 0 430.5 h 799.5 M 0 451 h 799.5">
+            </path>
+
+            <g stroke="#130f13" fill="none">
+                <circle id="circle-cover-1" cx="399.5" cy="225.5" r="399.5" stroke-width="240.2"></circle>
+                <circle id="circle-cover-2" cx="399.5" cy="225.5" r="79.95" stroke-width="159.8"></circle>
+            </g>
+
+            <text id="progress-bracket-start" x="390" y="159" fill="#bbb">[</text>
+            <text id="progress-initializing-text" x="335" y="159" fill="#bbb">INITIALIZING</text>
+            <!-- <text id="progress-finished-text" x="358" y="159" fill="#bbb">FINISHED</text> -->
+            <text id="progress-bracket-end" x="400" y="159" fill="#bbb">]</text>
+
+            <path id="curves" d="M 287 164 a 102.5 102.5 0 0 0 0 102.5 M 512.5 164 a 102.5 102.5 0 0 1 0 102.5"
+                fill="none" stroke="#ddd" stroke-width="0.25"></path>
+
+            <path id="vertical-lines" d="M 328 164 v 102.5 M 471.5 164 v 102.5" fill="none" stroke="#ddd"
+                stroke-width="3" stroke-dasharray="0.15 20.5" stroke-dashoffset="3" stroke-linecap="round"></path>
+
+            <rect id="system-access-to-im-system-text-background" x="364" y="267.5" width="70" height="8"
+                fill="rgba(255, 255, 255, 0.1)"></rect>
+            <text id="system-access-to-im-system-text" x="369" y="274.5" fill="#bbb">Access To iM System</text>
+            <path id="top-line" d="M 353.625 277.5 h 92.25" fill="none" stroke="#ddd" stroke-width="0.5"></path>
+            <text id="system-version-straght-link-mode-text" x="356" y="286.5" fill="#bbb">Version 2.4 Straght Link
+                Mode</text>
+
+            <circle id="progress-circle-1" cx="399.5" cy="215.5" r="40" stroke="#ddd" stroke-width="0.5" fill="rgba(255, 255, 255, 0.1)"></circle>
+            <circle id="progress-circle-2" cx="399.5" cy="215.5" r="25" stroke="#ddd" stroke-width="0.5" fill="none"></circle>
+
+            <path id="bottom-left-line"
+                d="M 246 282 h 88 m -12 0 m 0 -1 a 1 1 0 0 1, 0 2 a 1 1 0 0 1, 0 -2 m -15 1 m 0 -2 a 2 2 0 0 1, 0 4 a 2 2 0 0 1, 0 -4 m -10 2 m 0 -1 a 1 1 0 0 1, 0 2 a 1 1 0 0 1, 0 -2"
+                fill="#bbb" stroke="#bbb" stroke-width="0.25"></path>
+
+            <path id="bottom-right-line"
+                d="M 465.5 282 h 88 m -88 0 m 12 0 m 0 -1 a 1 1 0 0 1, 0 2 a 1 1 0 0 1, 0 -2 m 15 1 m 0 -2 a 2 2 0 0 1, 0 4 a 2 2 0 0 1, 0 -4 m 10 2 m 0 -1 a 1 1 0 0 1, 0 2 a 1 1 0 0 1, 0 -2"
+                fill="#bbb" stroke="#bbb" stroke-width="0.25"></path>
+
+            <path id="bottom-line-1" d="M 369 297 h 61.5" fill="none" stroke="#bbb" stroke-width="0.25"></path>
+            <path id="bottom-line-2" d="M 307.5 298.25 h 184.5" fill="none" stroke="#bbb" stroke-width="0.25"></path>
+        </svg>
+    </div>
+
+    <style></style>
+
+    <style>
+        svg #vertical-lines {
+            animation-name: vertical-lines-fade-in, vertical-lines;
+            animation-duration: 2s, 3s;
+            animation-iteration-count: 1, infinite;
+            animation-timing-function: linear, linear;
+            animation-fill-mode: backwards, forwards;
+        }
+
+        @keyframes vertical-lines-fade-in {
+            from {
+                opacity: 0;
+            }
+        }
+
+        @keyframes vertical-lines {
+            to {
+                stroke-dashoffset: 102.5;
+            }
+        }
+    </style>
+
+    <style>
+        svg #system-access-to-im-system-text,
+        svg #system-version-straght-link-mode-text {
+            font-size: 7px;
+            font-weight: 400;
+            font-family: 'Cabin', monospace;
+            animation: system-text 0.5s 1s backwards;
+        }
+
+        svg #system-access-to-im-system-text-background {
+            animation: system-text 0.5s 1s backwards;
+        }
+
+        svg #top-line {
+            stroke-dashoffset: 0px;
+            stroke-dasharray: 92.25px;
+            animation: top-line 0.5s 1s backwards;
+        }
+
+        @keyframes top-line {
+            from {
+                stroke-dashoffset: 92.25px;
+                stroke-dasharray: 92.25px;
+                transform: translateX(46.125px);
+            }
+        }
+
+        @keyframes system-text {
+            from {
+                opacity: 0;
+                transform: translateY(8px);
+            }
+        }
+    </style>
+
+    <style>
+        svg #curves {
+            transform-origin: center;
+            animation: curves 0.5s 0.5s backwards;
+        }
+
+        @keyframes curves {
+            from {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+        }
+    </style>
+
+    <style>
+        svg #bottom-left-line {
+            animation: bottom-left-line 0.5s 0.5s backwards;
+        }
+
+        svg #bottom-right-line {
+            animation: bottom-right-line 0.5s 0.5s backwards;
+        }
+
+        @keyframes bottom-left-line {
+            from {
+                opacity: 0;
+                transform: translateX(-61.5px);
+            }
+        }
+
+        @keyframes bottom-right-line {
+            from {
+                opacity: 0;
+                transform: translateX(61.5px);
+            }
+        }
+    </style>
+
+    <style>
+        svg #bottom-line-1 {
+            stroke-dashoffset: 0px;
+            stroke-dasharray: 61.5px;
+            animation: bottom-line-1 0.5s 1s backwards;
+        }
+
+        svg #bottom-line-2 {
+            stroke-dashoffset: 0px;
+            stroke-dasharray: 184.5px;
+            animation: bottom-line-2 0.5s 1s backwards;
+        }
+
+        @keyframes bottom-line-1 {
+            from {
+                stroke-dashoffset: 61.5px;
+                stroke-dasharray: 61.5px;
+                transform: translateX(30.75px);
+            }
+        }
+
+        @keyframes bottom-line-2 {
+            from {
+                stroke-dashoffset: 184.5px;
+                stroke-dasharray: 184.5px;
+                transform: translateX(92.25px);
+            }
+        }
+    </style>
+
+    <style>
+        svg #progress-bracket-start,
+        svg #progress-bracket-end,
+        svg #progress-initializing-text,
+        svg #progress-finished-text {
+            font-size: 16px;
+            font-weight: 500;
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        svg #progress-initializing-text,
+        svg #progress-finished-text {
+            font-weight: 100;
+            letter-spacing: 1px;
+        }
+
+        svg #progress-initializing-text {
+            animation: progress-initializing-text 0.5s 2s backwards;
+        }
+
+        svg #progress-bracket-start {
+            animation-name: progress-bracket-show, progress-bracket-start;
+            animation-duration: 2s, 2s;
+            animation-delay: 0s, 0s;
+            animation-fill-mode: backwards, forwards;
+        }
+
+        svg #progress-bracket-end {
+            animation-name: progress-bracket-show, progress-bracket-end;
+            animation-duration: 2s, 2s;
+            animation-delay: 0s, 0s;
+            animation-fill-mode: backwards, forwards;
+        }
+
+        @keyframes progress-initializing-text {
+            from {
+                opacity: 0;
+            }
+        }
+
+        @keyframes progress-bracket-show {
+            from {
+                opacity: 0;
+            }
+        }
+
+        @keyframes progress-bracket-start {
+            to {
+                transform: translateX(-76px);
+            }
+        }
+
+        @keyframes progress-bracket-end {
+            to {
+                transform: translateX(76px);
+            }
+        }
+    </style>
+
+    <style>
+        svg {
+            background-color: #130f13;
+        }
+
+        svg #circle-cover-1 {
+            animation: circle-cover-1 3s forwards;
+        }
+
+        svg #circle-cover-2 {
+            animation: circle-cover-2 3s forwards;
+        }
+
+        @keyframes circle-cover-1 {
+            to {
+                r: 1558px;
+            }
+        }
+
+        @keyframes circle-cover-2 {
+            to {
+                r: 1558px;
+            }
+        }
+    </style>
+</body>
+
+</html>
