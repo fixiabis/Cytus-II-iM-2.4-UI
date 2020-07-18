@@ -1,5 +1,7 @@
 /** 初始動畫 */
 async function initializeAnimation() {
+    await delay(0);
+
     applyStyle(outerCircleCover, innerCircleCover, {
         r: "2560",
         transitionProperty: "r",
