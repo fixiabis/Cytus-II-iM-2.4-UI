@@ -1,0 +1,102 @@
+.login-layout .login-form {
+    position: absolute;
+    top: calc(50% - 360px);
+    left: calc(50% - 640px);
+    width: 1280px;
+    height: 720px;
+    overflow: hidden;
+}
+
+.login-layout .login-form svg {
+    position: absolute;
+    top: calc(50% - 360px);
+    left: calc(50% - 640px);
+}
+
+.login-form-horizon-rolling-dots {
+    animation: login-form-horizon-rolling-dots 10s infinite linear;
+}
+
+@keyframes login-form-horizon-rolling-dots {
+    from {
+        stroke-dashoffset: 485;
+    }
+}
+
+.login-form {
+    border-color: #121012;
+}
+
+.login-layout .account-field-container,
+.login-layout .password-field-container {
+    position: absolute;
+    width: 513px;
+    height: 45px;
+    z-index: 10000;
+}
+
+.login-layout .account-field-container {
+    top: 308px;
+    left: 400px;
+}
+
+.login-layout .password-field-container {
+    top: 363px;
+    left: 400px;
+}
+
+.login-layout .account-field,
+.login-layout .password-field,
+.login-layout .account-field-asterisk,
+.login-layout .password-field-asterisk {
+    outline: none;
+    position: absolute;
+    display: block;
+    width: 513px;
+    height: 45px;
+    background-color: transparent;
+    top: 0px;
+    right: 0px;
+    border: none;
+    padding-left: 185px;
+    color: transparent;
+    caret-color: #ddd;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    font-family: "Roboto Mono";
+}
+
+.login-layout .account-field-asterisk,
+.login-layout .password-field-asterisk {
+    color: #ddd;
+}
+
+.login-layout .account-field::selection,
+.login-layout .password-field::selection {
+    color: transparent;
+    background-color: #ddd;
+}
+
+.login-layout .login-button {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ddd;
+    font-family: Rubik;
+    font-size: 24px;
+    position: absolute;
+    top: 425px;
+    left: 783px;
+    width: 129px;
+    height: 37px;
+    border: none;
+    border-radius: 3px;
+    z-index: 10000;
+    outline: none;
+    cursor: pointer;
+}
+
+.login-layout .login-button:active {
+    color: #130f13;
+    background-color: #bbb;
+    transform: scale(0.8);
+}

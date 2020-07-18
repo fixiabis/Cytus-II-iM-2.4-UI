@@ -1,0 +1,73 @@
+.vertical-rolling-dots {
+    animation: vertical-rolling-dots 2s infinite linear;
+}
+
+@keyframes vertical-rolling-dots {
+    from {
+        stroke-dashoffset: 145;
+    }
+}
+
+.system-access-to-im-system-text,
+.system-version-straght-link-mode-text {
+    font-size: 9px;
+    font-weight: 400;
+    letter-spacing: 1.1px;
+    font-family: "Mukta", monospace;
+}
+
+@keyframes outer-progress-circle {
+    0% {
+        transform: rotate(360deg);
+        stroke-dashoffset: -100px;
+        fill: rgba(255, 255, 255, 0.1);
+    }
+
+    75% {
+        transform: rotate(0deg);
+        stroke-dashoffset: 0px;
+        fill: rgba(255, 255, 255, 0.1);
+    }
+
+    80% {
+        fill: #ddd;
+    }
+
+    85% {
+        fill: rgba(255, 255, 255, 0.1);
+    }
+
+    90% {
+        fill: #ddd;
+    }
+}
+
+@keyframes inner-progress-circle {
+    0% {
+        transform: rotate(720deg);
+        stroke-dashoffset: 300px;
+        fill: none;
+    }
+
+    50% {
+        transform: rotate(360deg);
+        stroke-dashoffset: 300px;
+        fill: none;
+    }
+}
+
+.left-bracket-text,
+.right-bracket-text {
+    font-size: 26px;
+    font-weight: 500;
+    font-family: Rubik;
+}
+
+.initializing-text,
+.finished-text {
+    font-size: 26px;
+    font-weight: 500;
+    font-family: Rubik;
+    /* transform: scaleX(0.9);
+    transform-origin: center; */
+}
